@@ -128,11 +128,9 @@ SP2_DISPLAY_NAME := "nvram"
 SP2_BACKUP_METHOD := image
 SP2_MOUNTABLE := 0
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/gadget/lun%d/file
-TARGET_ARCH_VARIANT := armv7-a-neon
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_CUSTOM_BATTERY_PATH := /sys/devices/platform/mt6320-battery/power_supply/battery
 BOARD_HAS_NO_REAL_SDCARD := true
-#TW_NO_EXFAT := false
 TW_EXCLUDE_SUPERSU := true
 
 BOARD_CUSTOM_BOOTIMG_MK := device/acer/v370/custombootimg.mk

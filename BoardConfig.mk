@@ -107,18 +107,32 @@ BOARD_SEPOLICY_DIRS += \
 DEVICE_RESOLUTION := 540x960
 
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_HAS_LARGE_FILESYSTEM := true
+#BOARD_HAS_LARGE_FILESYSTEM := true
 
 TW_NO_USB_STORAGE := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_NO_REBOOT_BOOTLOADER := true
-TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_FLASH_FROM_STORAGE := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_INTERNAL_STORAGE_PATH := "/emmc"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+SP1_NAME := "uboot"
+SP1_BACKUP_METHOD := image
+SP1_MOUNTABLE := 0
+SP2_NAME := "nvram"
+SP2_DISPLAY_NAME := "nvram"
+SP2_BACKUP_METHOD := image
+SP2_MOUNTABLE := 0
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/gadget/lun%d/file
+TARGET_ARCH_VARIANT := armv7-a-neon
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_CUSTOM_BATTERY_PATH := /sys/devices/platform/mt6320-battery/power_supply/battery
-
-TW_INTERNAL_STORAGE_PATH := "/sdcard"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-TW_EXTERNAL_STORAGE_PATH := "/external_sdcard"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
+BOARD_HAS_NO_REAL_SDCARD := true
+#TW_NO_EXFAT := false
+TW_EXCLUDE_SUPERSU := true
 
 BOARD_CUSTOM_BOOTIMG_MK := device/acer/v370/custombootimg.mk

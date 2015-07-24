@@ -14,7 +14,7 @@
 
 # Inherit device configuration
 $(call inherit-product, device/acer/v370/full_v370.mk)
-$(call inherit-product, vendor/omni/config/common.mk)
+#$(call inherit-product, vendor/omni/config/common.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 960
